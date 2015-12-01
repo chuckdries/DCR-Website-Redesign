@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jsonClassListStyle.css">
+    <title>hi</title>
+
+    
+</head>
+
+<body>
+
+    <div id="loading">
+        <h2 id="loadingh2">Retrieving courses</h2>
+        <div class="eventDiv" id="loadEvent">
+            <h3 class="courseName">
+                <span>Events Loading</span>
+                
+            </h3>
+
+            <p>
+                <span>Event details incoming soon!</span>
+            </p>
+        </div>
+        <p id="jswarn">
+            Is javascript on? We need it to load the page. If it is, sit tight. This might be taking longer than usual.
+        </p>
+        <p id="jshelp">
+            At this point, it's been 20 seconds and we still haven't heard back from our servers. Check your internet connection or email info@desertcommunityrobotics.com for help.
+        </p>
+    </div>
+
+    <div id="events">
+       <p id="h1214">Hiding category "12-14 years"</p>
+        <h2 id="eventsh2">Available Courses:</h2>
+        
+    </div>
+
+    <script>
+        function reqListener() { //triggers when we get the master events list back
+            var masterEvents = JSON.parse(this.responseText);
+            console.log(masterEvents);
+
+            for (event in masterEvents) {
+
+                //http://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+                var eventDiv = document.createElement('div');
+                //var eventContain = 
+                eventDiv.id = masterEvents[event].EVT_ID;
+                eventDiv.className = 'eventDiv';
+                document.getElementById("events").appendChild(eventDiv);
+                document.getElementById(masterEvents[event].EVT_ID).innerHTML = "<h3 class=\"courseName\"><a href=\"https://www.desertcommunityrobotics.com/home/events/" + masterEvents[event].EVT_slug + "\">" + masterEvents[event].EVT_name + "</a></h3> <p class=\"courseId\">Course ID: " + masterEvents[event].EVT_ID + "</p> <p>" + masterEvents[event].EVT_short_desc + "</p>";
+
+            }
+            document.getElementById("loading").style.opacity = 0;
+            document.getElementById("loadingh2").style.left = "30px";
+            document.getElementById("eventsh2").style.left = "0px";
+            document.getElementById("events").style.opacity = 1;
+            setTimeout(function () {
+                document.getElementById("loading").style.display = "none";
+            }, 600);
+            load1214();
+        }
+
+        function hideCat(category) {
+            document.getElementById("h1214").style.opacity = "1";
+            for (event in category) {
+                document.getElementById(category[event].EVT_ID).style.opacity = "0";
+            }
+            
+        }
+
+        function catListener() {
+            console.log("yo");
+            var cat1214 = JSON.parse(this.responseText);
+            console.log(cat1214);
+            hideCat(cat1214);
+        }
+        var xmlhttp = new XMLHttpRequest();
+        var masterurl = "https://desertcommunityrobotics.com/home/wp-json/ee/v4.8/events";
+        var cat1214url = "https://desertcommunityrobotics.com/home/wp-json/ee/v4.6/events/?filter[where][Term_Taxonomy.Term.slug]=12-14yrs&include=EVT_name";
+        xmlhttp.addEventListener("load", reqListener); //event listener
+        xmlhttp.open("GET", masterurl); //load the master events list
+        xmlhttp.send();
+
+        function load1214() {
+            var xmlhttpCats = new XMLHttpRequest();
+            xmlhttpCats.addEventListener("load", catListener);
+            xmlhttpCats.open("GET", cat1214url);
+            xmlhttpCats.send();
+        }
+    </script>
+
+</body>
+
+</html>

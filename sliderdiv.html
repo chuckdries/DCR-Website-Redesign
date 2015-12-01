@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>asdf</title>
+    <style>
+        #bgcontainer {
+            /*background: red;*/
+            height: 500px;
+            width: 1980px;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        h1 {
+            font-family: arial;
+            color: white;
+            font-weight: normal;
+            text-align: center;
+            font-size: 5em;
+        }
+        
+        h1contain {
+            
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        span {
+            background: hsla(0, 0%, 0%, 0.37);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <script src="http://10.10.10.40/scripts/jquery.js"></script>
+    <script type="text/javascript" src="http://10.10.10.40/scripts/backstretch.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#bgcontainer").backstretch([
+                "http://10.10.10.40/images/1.jpg",
+                "http://10.10.10.40/images/2.jpg",
+                "http://10.10.10.40/images/2.jpg",
+                "http://10.10.10.40/images/2.jpg",
+                "http://10.10.10.40/images/2.jpg"
+            ], {
+                duration: 3000,
+                fade: 750
+            });
+        });
+    </script>
+
+    <div id="bgcontainer">.
+        <div class="h1contain">
+            <h1><span>A Technology Training Center for girls and boys, K-12</span></h1>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

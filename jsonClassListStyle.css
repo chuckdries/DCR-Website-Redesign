@@ -1,0 +1,153 @@
+@keyframes pulse {
+    0% {
+        opacity: .4;
+    }
+    100% {
+        opacity: .7;
+    }
+}
+
+@keyframes appear90 {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appear98 {
+    0% {
+        opacity: 0;
+    }
+    98% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+* {
+    transition: .8s;
+    line-height: 1.5;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    font-family: helvetica;
+}
+
+#events {
+    margin: auto;
+    max-width: 600px;
+    padding: 10px;
+    opacity: 0;
+    transition-delay: .3s;
+    transition-duration: 0s;
+}
+
+h2 {
+    font-family: helvetica;
+    position: relative;
+}
+
+.loadingh2 {
+    display: inline;
+    float: left;
+}
+
+#loading {
+    opacity: 1;
+    padding: 0;
+    transition-property: opacity, margin;
+    transition-duration: .5s, 0s;
+    transition-delay: 0s, .3s;
+    margin: auto;
+    max-width: 600px;
+    margin-top: .3em;
+    padding: 10px;
+    position: absolute;
+}
+
+#loadEvent {
+    /*            margin-top: 20px;*/
+    /*            line-height: 1.5;*/
+}
+
+#loadEvent span {
+    animation-name: pulse;
+    animation-duration: .3s;
+    animation-iteration-count: 67;
+    animation-direction: alternate;
+    background: #333;
+    color: #333;
+}
+
+.eventDiv {
+    border-width: 1px 1px 1px 5px;
+    border-style: solid;
+    border-color: #738996 #738996 #738996 #ff6c00;
+    box-shadow: 0px 0px 0px rgba(35, 53, 62, 0);
+    padding: 2px 2px 2px 10px;
+    margin-bottom: 10px;
+    background: #f0f0f0;
+    transition: .15s;
+    overflow: hidden;
+    /*            white-space: nowrap;*/
+    max-width: 800px;
+    display: block;
+}
+
+.eventDiv p {
+    margin: 0;
+}
+
+.eventDiv:hover {
+    box-shadow: 2px 2px 3px rgba(13, 36, 47, 0.2);
+    transform: scale(1.01);
+    /*            border-width: 1px 1px 1px 10px;*/
+}
+
+#eventsh2 {
+    left: -30px;
+}
+
+#jswarn {
+    font-family: helvetica;
+    animation-name: appear90;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+#jshelp {
+    font-family: helvetica;
+    animation-name: appear98;
+    animation-duration: 20s;
+    animation-iteration-count: 1;
+}
+
+.courseName {
+    font-family: helvetica;
+    /*            font-size: 1.5em;*/
+    font-weight: bold;
+    /*            color: #ff6c00;*/
+    margin: 0;
+}
+
+.courseId {
+    font-family: helvetica;
+    color: #666666;
+    font-size: .9em;
+    font-weight: lighter;
+}
+
+#h1214 {
+    opacity: 0;
+    float: right;
+    display: inline;
+    margin-top: 30px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>hi</title>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+
+    <h2>Is anyone home?</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        var poop = "https://desertcommunityrobotics.com/home/wp-json/ee/v4.8/events";
+        //var masterEvents = new Array;
+        //var masterEvents = new masterEventsect;
+        //console.log(masterEvents);
+        function jsonGetter() {
+            var psd;
+            function myFunction(asdf) {
+                //masterEvents = asdf;
+                console.log(asdf);
+                psd = asdf;
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    var def = new masterEventsect;
+                    def = JSON.parse(xmlhttp.responseText);
+                    console.log(def);
+                    document.getElementById("demo").innerHTML = def[0].EVT_ID + " = ID | name = " + def[0].EVT_name;
+                    myFunction(def);
+                    return def;
+
+                }
+            };
+            return (psd);
+
+        }
+
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+
+
+        var masterEvents = jsonGetter();
+        console.log("boo!");
+        console.log(masterEvents);
+        console.log("ya!");
+        //console.log(myArr);
+
+        //employee is our index variable
+        //        for (employee in masterEvents.employees) {
+        //            masterEvents = JSON.parse(text);
+        //            //http://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+        //            var personDiv = document.createElement('div');
+        //            personDiv.id = masterEvents.employees[employee].lastName;
+        //            personDiv.className = 'personDiv';
+        //            document.getElementsByTagName('body')[0].appendChild(personDiv);
+        //            document.getElementById(masterEvents.employees[employee].lastName).innerHTML = masterEvents.employees[employee].firstName + " " + masterEvents.employees[employee].lastName;
+        //            
+        //        }
+    </script>
+
+</body>
+
+</html>
