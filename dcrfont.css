@@ -38,6 +38,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-apple:before {
+  content: "\61";
+}
+.icon-circlecheck:before {
+  content: "\62";
+}
 .icon-check:before {
-  content: "a";
+  content: "\63";
+}
+.icon-personstar:before {
+  content: "\64";
+}
+.icon-personspeech:before {
+  content: "\65";
+}
+.icon-shieldcheck:before {
+  content: "\66";
+}
+.icon-handsheart:before {
+  content: "\67";
+}
+.icon-tick:before {
+  content: "\68";
 }
