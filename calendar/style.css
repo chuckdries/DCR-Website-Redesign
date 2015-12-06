@@ -67,3 +67,8 @@ h1{
     color: white;
     font-family: aleobold;
 }
+
+.faqhide {
+    max-height: 0px;
+    opacity: 0;
+}

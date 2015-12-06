@@ -62,3 +62,12 @@
 .icon-tick:before {
   content: "\68";
 }
+.icon-gradcap:before {
+  content: "\69";
+}
+.icon-onehat:before {
+  content: "\6a";
+}
+.icon-group:before {
+  content: "\6b";
+}
