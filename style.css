@@ -1,357 +1,479 @@
 h1,
 h2,
 h3,
-h4 {
+h4
+{
     font-weight: normal;
 }
 
-body {
+body
+{
     font-family: 'aleoregular';
-    margin: 0px;
     line-height: 1.2;
+
+    margin: 0;
 }
 
-nav {
+nav
+{
     position: fixed;
-    width: 100%;
     z-index: 5;
-    list-style-type: none;
+
+    overflow: visible;
+
+    width: 100%;
     padding: .6em;
-    background: #eee;
+
+    list-style-type: none;
+
+    text-align: center;
+
     border-top: 5px solid #eb7f00;
-   overflow: visible;
-    text-align: center;
-}
-
-nav ul {
-    padding: 0px;
-    margin: auto;
-    font-size: 1.2em;
-    max-width: 900px;
-}
-
-nav ul li {
-    margin: 6px;
-    display: inline;
-    background: #ededed;
-    line-height: 2;
-    padding: 4px;
-}
-
-nav ul ul{
-    position: absolute;
-    display: none;
-    float: none;
-    margin-top: 0px;
     background: #eee;
-    
 }
 
-nav ul li:hover ul{
-    display: block;
-}
-nav ul ul li{
-    display: list-item;
-    line-height: 2;
-    list-style: none;
-    float: none;
-}
+nav ul
+{
+    font-size: 1.2em;
 
-a {
-    color: #000000;
-    padding: 2px;
-    box-shadow:  inset 0 -6px 0 #ACF0F2;
-    text-decoration: none;
-    transition-duration: .3s;
-    transition-property: all;
-}
-
-a:hover {
-    color: #f3ffe2;
-    background: #225378;
-    box-shadow:  inset 0 -6px 0 #225378;
-/*    text-decoration: underline;*/
-
-    
-}
-
-#masthead {
-    z-index: 0;
-    /*max-width: 1920px;
-    margin: auto;*/
-    padding-bottom: 160px;
-    padding-top: 200px;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-
-}
-
-h1 {
-    font-family: 'aleolight';
-    font-size: 1.7em;
-    margin-left: 0px;
-    padding-left: 0px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    font-weight: normal;
-    color: #ededed;
-}
-
-.orange {
-    background: #225378;
-    padding: .2em;
-    color: white;
-}
-
-.keyPoints .orange {
-    background: none;
-    color: #eb7f00;
+    max-width: 900px;
+    margin: auto;
     padding: 0;
 }
 
-section h2 {
-    font-family: 'aleolight';
-    font-size: 2em;
-    background: white;
-    padding: 10px;
-    margin-top: .5em;
-    margin-bottom: .3em;
-    border-bottom: 3px solid #eb7f00;
-    max-width: 700px;
+nav ul li
+{
+    line-height: 2;
+
+    display: inline;
+
+    margin: 6px;
+    padding: 4px;
+
+    background: #ededed;
 }
 
-#masthead h2 {
-    color: white;
-    font-size: 2em;
-    margin-bottom: 0px;
-    margin-top: 9px;
+nav ul ul
+{
+    position: absolute;
+
+    display: none;
+    float: none;
+
+    margin-top: 0;
+
+    background: #eee;
 }
-#masthead h1, #masthead h2{
+
+nav ul li:hover ul
+{
+    display: block;
+}
+
+nav ul ul li
+{
+    line-height: 2;
+
+    display: list-item;
+    float: none;
+
+    list-style: none;
+}
+
+a
+{
+    padding: 2px;
+
+    transition-duration: .3s;
+    transition-property: all;
+    text-decoration: none;
+
+    color: #000;
+    box-shadow: inset 0 -6px 0 #acf0f2;
+}
+
+a:hover
+{
+    color: #f3ffe2;
+    background: #225378;
+    box-shadow: inset 0 -6px 0 #225378;
+    /*    text-decoration: underline;*/
+}
+
+#masthead
+{
+    z-index: 0;
+
+    display: table-cell;
+
+    padding-top: 200px;
+    /*max-width: 1920px;
+    margin: auto;*/
+    padding-bottom: 160px;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+h1
+{
+    font-family: 'aleolight';
+    font-size: 1.7em;
+    font-weight: normal;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
+
+    color: #ededed;
+}
+
+.orange
+{
+    padding: .2em;
+
+    color: white;
+    background: #225378;
+}
+
+.keyPoints .orange
+{
+    padding: 0;
+
+    color: #eb7f00;
+    background: none;
+}
+
+section h2
+{
+    font-family: 'aleolight';
+    font-size: 2em;
+
+    max-width: 700px;
+    margin-top: .5em;
+    margin-bottom: .3em;
+    padding: 10px;
+
+    border-bottom: 3px solid #eb7f00;
+    background: white;
+}
+
+#masthead h2
+{
+    font-size: 2em;
+
+    margin-top: 9px;
+    margin-bottom: 0;
+
+    color: white;
+}
+
+#masthead h1,
+#masthead h2
+{
     opacity: .9;
 }
 
-.keyPoints {
+.keyPoints
+{
     opacity: .87;
 }
 
 .cta h3,
-.cta p {
+.cta p
+{
     display: inline;
+
     margin: 0;
-    padding 5px;
+    padding: 5px;
 }
-.cta{
-    background: #eee;
+
+.cta
+{
     padding: 10px;
+
     text-align: center;
+
+    background: #eee;
 }
-.keyPoints ul {
-    list-style: none;
+
+.keyPoints ul
+{
+    margin: auto;
     margin-top: 10px;
     margin-bottom: 40px;
-    margin: auto;
     padding: 30px;
+
+    list-style: none;
+
     text-align: center;
-/*    vertical-align: top;*/
+    /*    vertical-align: top;*/
+
     color: black;
 }
-#pTest ul{
+
+#pTest ul
+{
     padding: 0;
+
     list-style-type: none;
-
-}
-#pTest li{
-    padding: 0px;
-    margin-left: 0px;
 }
 
-.keyPoints li {
+#pTest li
+{
+    margin-left: 0;
+    padding: 0;
+}
+
+.keyPoints li
+{
     display: inline-block;
-    height: 170px;
+
     width: 190px;
-/*    background: #efefef;*/
-    padding: 20px;
-    padding-top: 0;
+    height: 170px;
     margin: 22px;
     margin-top: 5px;
+    /*    background: #efefef;*/
+    padding: 20px;
+    padding-top: 0;
+
     vertical-align: top;
-    border-bottom: 3px solid #EB7f00;
-    border-top: 3px solid #EB7F00;
-/*    border-radius: 10px;*/
-    
 
+    border-top: 3px solid #eb7f00;
+    border-bottom: 3px solid #eb7f00;
+    /*    border-radius: 10px;*/
 }
 
-.keyPoints div {
-    
-    
-    margin: auto;
+.keyPoints div
+{
     max-width: 740px;
-    padding: 15px;
+    margin: auto;
     margin-top: 12px;
+    padding: 15px;
 }
 
-#pTest div{
-    background: #f5f5f5;
-    padding-left: 15px;
-    padding-right: 10px;
-    padding-top: 1px;
-    padding-bottom: 18px;
+#pTest div
+{
     max-width: 670px;
+    margin-bottom: 10px;
     margin-left: 20px;
-/*    border-radius: 8px;*/
+    padding-top: 1px;
+    padding-right: 10px;
+    padding-bottom: 18px;
+    padding-left: 15px;
+
+    border-left-width: 5px;
+    /*    border-radius: 8px;*/
     border-left-style: solid;
     border-left-color: #eb7f00;
-    border-left-width: 5px;
-    margin-bottom: 10px;
-}
-.source, .source2{
-    margin: 0px;
-    padding: 0px;
-    text-align: right;
-    color: #777;
-    font-family: 'aleolight';
-}
-.source{
-    color: #225378;
-    font-size: 1.2em;
+    background: #f5f5f5;
 }
 
-#copyContain {
+.source,
+.source2
+{
+    font-family: 'aleolight';
+
+    margin: 0;
+    padding: 0;
+
+    text-align: right;
+
+    color: #777;
+}
+
+.source
+{
+    font-size: 1.2em;
+
+    color: #225378;
+}
+
+#copyContain
+{
     max-width: 900px;
     margin: auto;
 }
 
-p {
+p
+{
     max-width: 650px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
-#copyContain li {
+#copyContain li
+{
+    max-width: 650px;
     margin-bottom: 5px;
+}
+
+ol
+{
     max-width: 650px;
 }
 
-ol {
-    max-width: 650px
-}
-
-
-#classList ul {
+#classList ul
+{
     max-width: 650px;
     margin: auto;
 }
 
-
-#classList {
+#classList
+{
     float: right;
+    margin-top: -18px;
     width: 300px;
     padding-left: 20px;
+
     background: white;
 }
 
-#logo {
-    float: left;
-    z-index: 99;
+#logo
+{
     position: relative;
+    z-index: 99;
     top: 5px;
+
+    float: left;
+
     margin-left: 15px;
 }
 
-.w1400 {
+.w1400
+{
     max-width: 1380px;
     margin: auto;
 }
 
-.w1440 {
+.w1440
+{
     max-width: 1400px;
 }
 
-#mastheadWrap {
-    background: url('pics/1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
+#mastheadWrap
+{
+    display: table;
+
     width: 100%;
     min-height: 70vh;
-    display: table;
+
+    background: url('pics/1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
 }
 
-@media screen and (max-width: 800px) {
-    h1 {
+@media screen and (max-width: 800px)
+{
+    h1
+    {
         font-size: 2em;
     }
-    #classList {
+    #classList
+    {
         float: none;
+
         width: 100%;
-        padding-left: 0px;
+        padding-left: 0;
     }
-    nav ul li {
-        margin: 5px;
+    nav ul li
+    {
         line-height: 1;
+
+        margin: 5px;
     }
-    #logo {
+    #logo
+    {
         float: right;
     }
-    p {
+    p
+    {
         padding: 15px;
     }
-    #masthead .cta {
-        max-width: 600px;
+    #masthead .cta
+    {
         font-size: .9em;
+
+        max-width: 600px;
     }
-    .keyPoints{
+    .keyPoints
+    {
         opacity: 1;
     }
-    #masthead h1{
+    #masthead h1
+    {
         margin-bottom: 15px;
     }
-    #masthead h2{
+    #masthead h2
+    {
         margin-top: 10px;
     }
-    nav ul ul{
+    nav ul ul
+    {
         display: block;
+
         margin-left: 10px;
     }
-    nav ul ul li{
+    nav ul ul li
+    {
         line-height: 1;
     }
 }
 
-.clearfix {
-    clear: both;
+.clearfix
+{
     display: hidden;
-    opacity: 0;
+    clear: both;
+
     height: 1px;
+
+    opacity: 0;
 }
-.icon {
-    margin: auto;
-    text-align: center;
-    padding: 0;
-    height: 50px;
+
+.icon
+{
     position: relative;
     top: -8px;
+
+    height: 50px;
+    margin: auto;
+    padding: 0;
+
+    text-align: center;
+
     background: none !important;
 }
-.icon:before{
-    color: #eb7f00;
-	font-size: 50px;
-    margin: 0px 0px 10px 0px;
+
+.icon:before
+{
+    font-size: 50px;
+
+    margin: 0 0 10px 0;
     padding: 0;
+
+    color: #eb7f00;
 }
-.faqhide {
-    max-height: 0px;
+
+.faqhide
+{
     overflow: hidden;
+
+    max-height: 0;
     margin: 0;
     padding: 0;
-    opacity: 0;
+
     transition-duration: .3s;
+
+    opacity: 0;
 }
-.shown{
+
+.shown
+{
     max-height: 9999px;
-    opacity: 1;
     margin: 5px;
     padding: 5px;
+
+    opacity: 1;
 }
