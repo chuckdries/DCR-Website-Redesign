@@ -213,19 +213,6 @@ section h2
     color: black;
 }
 
-#pTest ul
-{
-    padding: 0;
-
-    list-style-type: none;
-}
-
-#pTest li
-{
-    margin-left: 0;
-    padding: 0;
-}
-
 .keyPoints li
 {
     display: inline-block;
@@ -252,106 +239,7 @@ section h2
     margin-top: 12px;
     padding: 15px;
 }
-
-#pTest div
-{
-    max-width: 670px;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    padding-top: 1px;
-    padding-right: 10px;
-    padding-bottom: 18px;
-    padding-left: 15px;
-
-    border-left-width: 5px;
-    /*    border-radius: 8px;*/
-    border-left-style: solid;
-    border-left-color: #eb7f00;
-    background: #f5f5f5;
-}
-
-.source,
-.source2
-{
-    font-family: 'aleolight';
-
-    margin: 0;
-    padding: 0;
-
-    text-align: right;
-
-    color: #777;
-}
-
-.source
-{
-    font-size: 1.2em;
-
-    color: #225378;
-}
-
-#copyContain
-{
-    max-width: 900px;
-    margin: auto;
-}
-
-p
-{
-    max-width: 650px;
-    margin-bottom: 10px;
-}
-
-#copyContain li
-{
-    max-width: 650px;
-    margin-bottom: 5px;
-}
-
-ol
-{
-    max-width: 650px;
-}
-
-#classList ul
-{
-    max-width: 650px;
-    margin: auto;
-}
-
-#classList
-{
-    float: right;
-    margin-top: -18px;
-    width: 300px;
-    padding-left: 20px;
-
-    background: white;
-}
-
-#logo
-{
-    position: relative;
-    z-index: 99;
-    top: 5px;
-
-    float: left;
-
-    margin-left: 15px;
-}
-
-.w1400
-{
-    max-width: 1380px;
-    margin: auto;
-}
-
-.w1440
-{
-    max-width: 1400px;
-}
-
-#mastheadWrap
+stheadWrap
 {
     display: table;
 
