@@ -37,6 +37,9 @@ nav
     margin: auto;
 }
 
+input{
+/*    display: none;*/
+}
 nav ul
 {
     font-size: 16px;
@@ -332,4 +335,8 @@ section h2
     padding: 0;
 
     color: #eb7f00;
+}
+[type="checkbox"]:checked ~ nav ul {
+    color: green;
+    background: red;
 }
