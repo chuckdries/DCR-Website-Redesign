@@ -13,30 +13,35 @@ body
 
     margin: 0;
 }
-
+#stickyContain{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background: #eee;
+    padding: 0px;
+    margin: auto;
+    border-top: 5px solid #eb7f00;
+    text-align: center;
+}
+#navContain{
+    padding: 0px;
+    margin: 0;
+    clear: both;
+}
 nav
 {
-/*    position: fixed;*/
-    z-index: 5;
-
     overflow: visible;
-
-    width: 100%;
-    padding: .6em;
-
     list-style-type: none;
-
-/*    text-align: center;*/
-
-    border-top: 5px solid #eb7f00;
-    background: #eee;
+    text-align: center;
+    max-width: 650px;
+    margin: auto;
 }
 
 nav ul
 {
     font-size: 16px;
     z-index: 4;
-
+    float: none;
     margin: auto;
     padding: 0;
 }
@@ -44,24 +49,19 @@ nav ul
 nav ul li
 {
     line-height: 2;
-
-    display: inline;
-
+    float: left;
+    display: inline-block;
     margin: 6px;
     padding: 4px;
-
     background: #ededed;
 }
 
 nav ul ul
 {
     position: absolute;
-
     display: none;
-    float: none;
-
     margin-top: -2px;
-
+    
     background: #eee;
 }
 
@@ -73,11 +73,9 @@ nav ul li:hover ul
 nav ul ul li
 {
     line-height: 2;
-
     display: list-item;
-    float: none;
-
     list-style: none;
+    float: none;
 }
 
 a
@@ -191,11 +189,8 @@ section h2
 
 .cta
 {
-
     padding: 10px;
-
     text-align: center;
-
     background: #eee;
 }
 
@@ -286,7 +281,6 @@ section h2
     #masthead .cta
     {
         font-size: .9em;
-
         max-width: 600px;
     }
     .keyPoints
