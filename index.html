@@ -17,10 +17,14 @@
 <body>
     <div id="stickyContain">
         <div id="navContain">
+            <input type="checkbox" id="nav" />
+            <label for="nav"></label>
+
             <nav class="nav-collapse">
+
                 <ul>
-                    <li><a href="#">Home</a>
-                        <ul>
+                    <li class="hasChildren"><a href="#">Home</a>
+                        <ul class="l50">
                             <li><a href="">Why choose us?</a></li>
                             <li><a href="">FAQ</a></li>
                         </ul>
@@ -29,18 +33,20 @@
                     <li><a href="">Offerings</a></li>
                     <li><a href="">Contact Info </a></li>
                     <li><a href="">Class Registration</a>
-                        <ul>
+                        <ul class="l30">
                             <li><a href="">Class Waiver</a></li>
                             <li><a href="">Media Release</a></li>
                         </ul>
                     </li>
                     <li><a href="">Special Events</a></li>
                 </ul>
-            
-            
+
+
+
             </nav>
         </div>
-<div class="clearfix"></div>
+        <div class="clearfix"></div>
+        <span id="navHolder"></span>
         <div class="cta">
             <h3>Get started today:</h3>&nbsp;&nbsp;
             <h3>480-331-7660 </h3> &nbsp;&nbsp;&#8226;&nbsp;
@@ -68,21 +74,19 @@
 
             </div>
         </div>
-        <div id="copyContain">
-            <div class="keyPoints">
-                <ul>
-                    <li>
-                        <div class="icon icon-group"></div>
-                        A <span class="orange">custom program</span> designed for bright and talented children</li>
-                    <li>
-                        <div class="icon icon-handsheart"></div>An <span class="orange">exclusive community</span> of skilled, devoted staff in a safe environment</li>
-                    <li>
-                        <div class="icon icon-onehat"></div><span class="orange">Individual Attention<br></span> 1:4 teacher student ratio, 1:1 in private tutoring</li>
+        <div class="keyPoints">
+            <ul>
+                <li>
+                    <div class="icon icon-group"></div>
+                    A <span class="orange">custom program</span> designed for bright and talented children</li>
+                <li>
+                    <div class="icon icon-handsheart"></div>An <span class="orange">exclusive community</span> of skilled, devoted staff in a safe environment</li>
+                <li>
+                    <div class="icon icon-onehat"></div><span class="orange">Individual Attention<br></span> 1:4 teacher student ratio, 1:1 in private tutoring</li>
 
-                </ul>
-            </div>
-
+            </ul>
         </div>
+        <div class="section" id="courses"></div>
     </article>
     <script>
         var nav = responsiveNav(".nav-collapse");

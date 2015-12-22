@@ -1,19 +1,17 @@
 h1,
 h2,
 h3,
-h4
-{
+h4 {
     font-weight: normal;
 }
 
-body
-{
+body {
     font-family: 'aleoregular';
     line-height: 1.2;
-
     margin: 0;
 }
-#stickyContain{
+
+#stickyContain {
     position: fixed;
     width: 100%;
     z-index: 2;
@@ -23,13 +21,14 @@ body
     border-top: 5px solid #eb7f00;
     text-align: center;
 }
-#navContain{
+
+#navContain {
     padding: 0px;
     margin: 0;
     clear: both;
 }
-nav
-{
+
+nav {
     overflow: visible;
     list-style-type: none;
     text-align: center;
@@ -37,8 +36,11 @@ nav
     margin: auto;
 }
 
-nav ul
-{
+input {
+    /*    display: none;*/
+}
+
+nav ul {
     font-size: 16px;
     z-index: 4;
     float: none;
@@ -46,8 +48,7 @@ nav ul
     padding: 0;
 }
 
-nav ul li
-{
+nav ul li {
     line-height: 2;
     float: left;
     display: inline-block;
@@ -56,163 +57,128 @@ nav ul li
     background: #ededed;
 }
 
-nav ul ul
-{
-    position: absolute;
+nav ul ul {
     display: none;
     margin-top: -2px;
-    
     background: #eee;
 }
 
-nav ul li:hover ul
-{
+nav ul li:hover ul {
     display: block;
+    position: absolute;
 }
 
-nav ul ul li
-{
+nav ul ul li {
     line-height: 2;
     display: list-item;
     list-style: none;
     float: none;
 }
 
-a
-{
+a {
     padding: 2px;
-
     transition-duration: .3s;
     transition-property: all;
     text-decoration: none;
-
     color: #000;
     box-shadow: inset 0 -6px 0 #acf0f2;
 }
 
-a:hover
-{
+a:hover {
     color: #f3ffe2;
     background: #225378;
     box-shadow: inset 0 -6px 0 #225378;
     /*    text-decoration: underline;*/
 }
 
-#masthead
-{
+#masthead {
     z-index: 0;
-
+    padding-top: 80px;
     display: table-cell;
-
-/*    padding-top: 200px;*/
+    /*    padding-top: 200px;*/
     /*max-width: 1920px;
     margin: auto;*/
-/*    padding-bottom: 160px;*/
-
+    /*    padding-bottom: 160px;*/
     text-align: center;
     vertical-align: middle;
 }
 
-h1
-{
+h1 {
     font-family: 'aleolight';
     font-size: 1.7em;
     font-weight: normal;
-
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 0;
     padding-left: 0;
-
     color: #ededed;
 }
 
-.orange
-{
+.orange {
     padding: .2em;
-
     color: white;
     background: #225378;
 }
 
-.keyPoints .orange
-{
+.keyPoints .orange {
     padding: 0;
-
     color: #eb7f00;
     background: none;
 }
 
-section h2
-{
+section h2 {
     font-family: 'aleolight';
     font-size: 2em;
-
     max-width: 700px;
     margin-top: .5em;
     margin-bottom: .3em;
     padding: 10px;
-
     border-bottom: 3px solid #eb7f00;
     background: white;
 }
 
-#masthead h2
-{
+#masthead h2 {
     font-size: 2em;
-
     margin-top: 9px;
     margin-bottom: 0;
-
     color: white;
 }
 
 #masthead h1,
-#masthead h2
-{
+#masthead h2 {
     opacity: .9;
 }
 
-.keyPoints
-{
+.keyPoints {
     opacity: .87;
 }
 
 .cta h3,
-.cta p
-{
+.cta p {
     display: inline;
-
     margin: 0;
     padding: 5px;
 }
 
-.cta
-{
+.cta {
     padding: 10px;
     text-align: center;
     background: #eee;
 }
 
-.keyPoints ul
-{
+.keyPoints ul {
     margin: auto;
     margin-top: 10px;
     margin-bottom: 40px;
     padding: 30px;
-
     list-style: none;
-
     text-align: center;
     /*    vertical-align: top;*/
-
     color: black;
 }
 
-.keyPoints li
-{
+.keyPoints li {
     display: inline-block;
-
     width: 190px;
     height: 170px;
     margin: 22px;
@@ -220,30 +186,23 @@ section h2
     /*    background: #efefef;*/
     padding: 20px;
     padding-top: 0;
-
     vertical-align: top;
-
     border-top: 3px solid #eb7f00;
     border-bottom: 3px solid #eb7f00;
     /*    border-radius: 10px;*/
 }
 
-.keyPoints div
-{
+.keyPoints div {
     max-width: 740px;
     margin: auto;
     margin-top: 12px;
     padding: 15px;
 }
 
-
-#mastheadWrap
-{
+#mastheadWrap {
     display: table;
-
     width: 100%;
     min-height: 60vh;
-
     background: url('pics/1.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -251,85 +210,175 @@ section h2
     background-size: cover;
 }
 
-@media screen and (max-width: 800px)
-{
-    h1
-    {
+#navContain [type="checkbox"],
+#navContain label {
+    display: none;
+}
+
+#masthead .cta {
+    max-width: 650px;
+}
+
+.hasChildren {
+    /*default*/
+}
+
+@media screen and (max-width: 800px) {
+    .hasChildren {
+        
+    }
+    #navHolder {
+        display: inline-block;
+        width: 60px;
+        float: left;
+        height: 40px;
+    }
+    h1 {
         font-size: 2em;
     }
-    #classList
-    {
+    #classList {
         float: none;
-
         width: 100%;
         padding-left: 0;
     }
-    nav ul li
-    {
+    nav ul{
+        text-align: left;
+        margin-left: 60px;
+    }
+    nav ul li {
         line-height: 1;
-
         margin: 5px;
+        display: block;
+        float: none;
+
     }
-    #logo
-    {
-        float: right;
-    }
-    p
-    {
+    p {
         padding: 15px;
     }
-    #masthead .cta
-    {
+    #masthead .cta {
         font-size: .9em;
         max-width: 600px;
     }
-    .keyPoints
-    {
+    .keyPoints {
         opacity: 1;
     }
-    #masthead h1
-    {
+    #masthead h1 {
         margin-bottom: 15px;
     }
-    #masthead h2
-    {
+    #masthead h2 {
         margin-top: 10px;
     }
-    nav ul ul
-    {
+    nav ul ul {
+        font-size: .8em;
         display: block;
+        margin: auto;
+        background: none;
+        margin-top: 10px;
+        text-align: left;
+        margin-left: 20px;
 
-        margin-left: 10px;
     }
-    nav ul ul li
-    {
+    nav {
+        max-width: 800px;
+    }
+    nav ul li:hover ul {
+        position: relative;
+    }
+    nav ul ul li {
         line-height: 1;
+        background: none;
+    }
+    [type="checkbox"] ~ nav {
+        display: block;
+        transition: .5s;
+        -webkit-transition: .2s;
+        height: 320px;
+        padding: 0px;
+        margin-top: -320px;
+    }
+    [type="checkbox"]:checked ~ nav {
+        display: block;
+        transition: .5s;
+        -webkit-transition: .2s;
+        opacity: 1;
+        margin-top: 0px;
+    }
+    #navContain label {
+        display: block;
+        background: #eee;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        position: absolute;
+        left: 20px;
+        top: 3px;
+    }
+    #navContain label:after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 5px;
+        background: #777;
+        border-radius: 2px;
+        margin: 7px 5px;
+        box-shadow: 0px 10px 0px #777, 0px 20px 0px #777;
+        transition: .5s;
+        -webkit-transition: .2s;
+        transform: scale(1)
+    }
+    [type="checkbox"]:checked ~ #navContain label:after {
+        background: #225378;
+        box-shadow: 0px 10px 0px #225378, 0px 20px 0px #225378;
+        transform: scale(0.9)
+    }
+    #navContain label:hover:after {
+        background: #eb7f00;
+        box-shadow: 0px 10px 0px #eb7f00, 0px 20px 0px #eb7f00;
+        transform: scale(1);
     }
 }
 
-.clearfix
-{display: hidden;clear: both; height: 1px;opacity: 0;}
+@media screen and (max-width: 698px) {
+    #navContain label {
+        top: 14px;
+    }
+    #navHolder [type="checkbox"]:checked ~ #navContain label{
+        top: 3px;
+    }
+}
 
-.icon
-{
+@media screen and (max-width: 648px) {
+    #navHolder {
+        width: 10px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #navHolder {
+        width: 60px;
+    }
+}
+
+.clearfix {
+    display: hidden;
+    clear: both;
+    height: 1px;
+    opacity: 0;
+}
+
+.icon {
     position: relative;
     top: -8px;
-
     height: 50px;
     margin: auto;
     padding: 0;
-
     text-align: center;
-
     background: none !important;
 }
 
-.icon:before
-{
+.icon:before {
     font-size: 50px;
-
     margin: 0 0 10px 0;
     padding: 0;
-
     color: #eb7f00;
 }
