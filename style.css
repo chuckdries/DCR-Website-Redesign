@@ -58,7 +58,7 @@ nav ul li {
 }
 
 nav ul ul {
-    position: absolute;
+
     display: none;
     margin-top: -2px;
     background: #eee;
@@ -66,6 +66,7 @@ nav ul ul {
 
 nav ul li:hover ul {
     display: block;
+    position: absolute;
 }
 
 nav ul ul li {
@@ -249,18 +250,22 @@ label {
     nav ul ul {
         display: block;
         margin: auto;
-        postition: relative;
+        background: none;
+    }
+    nav ul li:hover ul{
+        position: relative;
     }
     nav ul ul li {
         line-height: 1;
+        background: none;
     }
     [type="checkbox"] ~ nav {
         display: block;
         transition: .5s;
         -webkit-transition: .2s;
-        height: 250px;
+        height: 320px;
         padding: 0px;
-        margin-top: -250px;
+        margin-top: -320px;
     }
     [type="checkbox"]:checked ~ nav {
         display: block;
