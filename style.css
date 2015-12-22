@@ -58,7 +58,6 @@ nav ul li {
 }
 
 nav ul ul {
-
     display: none;
     margin-top: -2px;
     background: #eee;
@@ -94,6 +93,7 @@ a:hover {
 
 #masthead {
     z-index: 0;
+    padding-top: 80px;
     display: table-cell;
     /*    padding-top: 200px;*/
     /*max-width: 1920px;
@@ -209,11 +209,30 @@ section h2 {
     background-position: center top;
     background-size: cover;
 }
-[type="checkbox"],
-label {
+
+#navContain [type="checkbox"],
+#navContain label {
     display: none;
 }
+
+#masthead .cta {
+    max-width: 650px;
+}
+
+.hasChildren {
+    /*default*/
+}
+
 @media screen and (max-width: 800px) {
+    .hasChildren {
+        
+    }
+    #navHolder {
+        display: inline-block;
+        width: 60px;
+        float: left;
+        height: 40px;
+    }
     h1 {
         font-size: 2em;
     }
@@ -222,14 +241,16 @@ label {
         width: 100%;
         padding-left: 0;
     }
+    nav ul{
+        text-align: left;
+        margin-left: 70px;
+    }
     nav ul li {
         line-height: 1;
         margin: 5px;
         display: block;
         float: none;
-    }
-    #logo {
-        float: right;
+
     }
     p {
         padding: 15px;
@@ -248,11 +269,15 @@ label {
         margin-top: 10px;
     }
     nav ul ul {
+        font-size: .8em;
         display: block;
         margin: auto;
         background: none;
+        margin-top: 10px;
+        text-align: left;
+        margin-left: 2%;
     }
-    nav ul li:hover ul{
+    nav ul li:hover ul {
         position: relative;
     }
     nav ul ul li {
@@ -274,7 +299,7 @@ label {
         opacity: 1;
         margin-top: 0px;
     }
-    label {
+    #navContain label {
         display: block;
         background: #eee;
         width: 40px;
@@ -282,9 +307,9 @@ label {
         cursor: pointer;
         position: absolute;
         left: 20px;
-        top: 0px;
+        top: 3px;
     }
-    label:after {
+    #navContain label:after {
         content: '';
         display: block;
         width: 30px;
@@ -297,17 +322,34 @@ label {
         -webkit-transition: .2s;
         transform: scale(1)
     }
-    [type="checkbox"]:checked ~ label:after{
+    [type="checkbox"]:checked ~ #navContain label:after {
         background: #225378;
         box-shadow: 0px 10px 0px #225378, 0px 20px 0px #225378;
         transform: scale(0.9)
     }
-    label:hover:after{
+    #navContain label:hover:after {
         background: #eb7f00;
         box-shadow: 0px 10px 0px #eb7f00, 0px 20px 0px #eb7f00;
         transform: scale(1);
     }
+}
 
+@media screen and (max-width: 698px) {
+    #navContain label {
+        top: 14px;
+    }
+}
+
+@media screen and (max-width: 648px) {
+    #navHolder {
+        width: 10px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #navHolder {
+        width: 60px;
+    }
 }
 
 .clearfix {
@@ -333,4 +375,3 @@ label {
     padding: 0;
     color: #eb7f00;
 }
-
