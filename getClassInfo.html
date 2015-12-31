@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jsonClassListStyle.css">
+    <title>hi</title>
+
+    
+</head>
+
+<body>
+
+    <div id="loading">
+        <h2 id="loadingh2">Retrieving courses</h2>
+        <div class="eventDiv" id="loadEvent">
+            <h3 class="courseName">
+                <span>Events Loading</span>
+
+            </h3>
+
+            <p>
+                <span>Event details incoming soon!</span>
+            </p>
+        </div>
+        <p id="jswarn">
+            Is javascript on? We need it to load the page. If it is, sit tight. This might be taking longer than usual.
+        </p>
+        <p id="jshelp">
+            At this point, it's been 20 seconds and we still haven't heard back from our servers. Check your internet connection or email info@desertcommunityrobotics.com for help.
+        </p>
+    </div>
+
+    <div id="events">
+       <p id="h1214">Hiding category "12-14 years"</p>
+        <h2 id="eventsh2">Available Courses:</h2>
+        
+    </div>
+
+    <script>
+    
+    var xmlHttpReq = []
+   
+    
+    function displayData(parsedData,idx){
+      console.log("Idx: " + idx + " Data: ");
+      console.log(parsedData);
+    }
+
+    function wgetJSON(url,callbackFunc, filter){
+      var idx = xmlHttpReq.length
+      xmlHttpReq.push(new XMLHttpRequest());
+      (function(Idx,url,callbackFunc,filter){  // Create a function to preserve the state of the variables for this call
+        if (filter == undefined){
+          xmlHttpReq[idx].open("GET", url); //load the Just the url
+        } else{
+          xmlHttpReq[idx].open("GET", url + "?filter" + filter); //apply the filter to the url
+        }
+        xmlHttpReq[idx].onreadystatechange = function (oEvent) {
+           if (xmlHttpReq[idx].readyState === 4) {
+              if (xmlHttpReq[idx].status === 200) {
+                callbackFunc(JSON.parse(xmlHttpReq[idx].responseText),idx);
+              } else {
+                console.log("Error", xmlHttpReq[idx].statusText);
+              }
+           }
+        };
+        xmlHttpReq[idx].send(null); //Send the request
+      })(idx,url,callbackFunc,filter); // And call it immediately
+      return idx;
+    }
+    
+    wgetJSON("https://websitedev.desertcommunityrobotics.com:9044/home/wp-json/ee/v4.8/events/", displayData)
+    wgetJSON("https://websitedev.desertcommunityrobotics.com:9044/home/wp-json/ee/v4.8/events/4585/", displayData)
+    wgetJSON("https://websitedev.desertcommunityrobotics.com:9044/home/wp-json/ee/v4.8/events/4582/", displayData)
+    wgetJSON("https://websitedev.desertcommunityrobotics.com:9044/home/wp-json/ee/v4.8/events/", displayData,"[where][Term_Taxonomy.Term.slug]=12-14yrs&[Term_Taxonomy.Term.slug]=14-17yrs")
+    
+    </script>
+
+</body>
+
+</html>
