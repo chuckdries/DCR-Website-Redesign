@@ -67,7 +67,7 @@
         function hideCat(category) {
             document.getElementById("h1214").style.opacity = "1";
             for (event in category) {
-                document.getElementById(category[event].EVT_ID).style.opacity = "0";
+//                document.getElementById(category[event].EVT_ID).style.opacity = "0";
             }
             
         }
@@ -79,8 +79,8 @@
             hideCat(cat1214);
         }
         var xmlhttp = new XMLHttpRequest();
-        var masterurl = "https://desertcommunityrobotics.com/home/wp-json/ee/v4.8/events";
-        var cat1214url = "https://desertcommunityrobotics.com/home/wp-json/ee/v4.6/events/?filter[where][Term_Taxonomy.Term.slug]=12-14yrs&include=EVT_name";
+        var masterurl = "https://websitedev.desertcommunityrobotics.com:9044/home/wp-json/ee/v4.8/events";
+        var cat1214url = "https://websitedev.desertcommunityrobotics.com:9044/home/wp-json/ee/v4.8/events/?filter[where][Term_Taxonomy.Term.slug]=12-14yrs&include=EVT_name";
         xmlhttp.addEventListener("load", reqListener); //event listener
         xmlhttp.open("GET", masterurl); //load the master events list
         xmlhttp.send();

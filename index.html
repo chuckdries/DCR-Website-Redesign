@@ -19,9 +19,7 @@
         <div id="navContain">
             <input type="checkbox" id="nav" />
             <label for="nav"></label>
-
             <nav class="nav-collapse">
-
                 <ul>
                     <li class="hasChildren"><a href="#">Home</a>
                         <ul class="l50">
@@ -41,8 +39,6 @@
                     <li><a href="">Special Events</a></li>
                 </ul>
 
-
-
             </nav>
         </div>
         <div class="clearfix"></div>
@@ -57,21 +53,16 @@
         <div id="mastheadWrap">
             <div id="masthead">
                 <div class="centerer">
-
                     <header>
                         <h1><span class="orange">Desert Community Robotics</span></h1>
                         <h2><span class="orange">A Technology Training Center for Youth</span></h2>
                     </header>
-                    <section class="keyPoints">
+                    <div class="keyPoints">
                         <div class="cta">
                             <h3>Game Development &nbsp;&#8226;&nbsp;  Engineering &amp; Robotics &nbsp;&#8226;&nbsp; Animation &amp; Digital Art </h3>
                         </div>
-
-
-                    </section>
-
+                    </div>
                 </div>
-
             </div>
         </div>
         <div class="keyPoints">
@@ -86,7 +77,70 @@
 
             </ul>
         </div>
-        <div class="section" id="courses"></div>
+        <div class="sectionWrap">
+            <div class="section" id="courses">
+                <h2 id="coursesTitle"><span class="orange">Courses</span></h2>
+                <div class="featuredCourseContain">
+                    <!--                   <h3><span class="orange">Featured Courses:</span></h3>-->
+                    <div class="featuredCourse">
+                        <div class="featuredCourseHeader" id="gameDesign">
+                            <div class="grey">
+                                <h4><span class="orange">Game Design</span></h4>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+
+                    <div class="featuredCourse">
+                        <div class="featuredCourseHeader" id="robotics">
+                            <div class="grey">
+                                <h4><span class="orange">Robotics</span></h4>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="featuredCourse">
+                        <div class="featuredCourseHeader" id="robotics">
+                            <div class="grey">
+                                <h4><span class="orange">Robotics</span></h4>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <p><a id="moreCourses" href="#"><span class="blueUnder">See our entire course lineup</span></a></p>
+                </div>
+
+                <br />
+                <p>All of our courses are offered as either</p>
+                <div class="courseCatContain" id="privates">
+                    <div class="courseCatImg">
+
+                    </div>
+                    <div class="widthWrap">
+                        <div class="courseCatContent">
+                            <h3><span class="orange">Private Lessons</span></h3>
+                            <p>One-on-one training and extra flexibility to learn more specifically exacyly what you want and cater more closely to your child's needs</p>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="courseCatContain" id="group">
+                    <div class="courseCatImg">
+
+                    </div>
+                    <div class="widthWrap">
+                        <div class="courseCatContent">
+                            <h3><span class="orange">Group Classes</span></h3>
+                            <p>A more social experience that brings like-minded children together for fun and learning.</p>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
     </article>
     <script>
         var nav = responsiveNav(".nav-collapse");

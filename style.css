@@ -20,6 +20,7 @@ body {
     margin: auto;
     border-top: 5px solid #eb7f00;
     text-align: center;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 }
 
 #navContain {
@@ -126,16 +127,7 @@ h1 {
     background: none;
 }
 
-section h2 {
-    font-family: 'aleolight';
-    font-size: 2em;
-    max-width: 700px;
-    margin-top: .5em;
-    margin-bottom: .3em;
-    padding: 10px;
-    border-bottom: 3px solid #eb7f00;
-    background: white;
-}
+
 
 #masthead h2 {
     font-size: 2em;
@@ -202,7 +194,7 @@ section h2 {
 #mastheadWrap {
     display: table;
     width: 100%;
-    min-height: 60vh;
+    min-height: 70vh;
     background: url('pics/1.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -223,10 +215,151 @@ section h2 {
     /*default*/
 }
 
+.clearfix {
+    display: hidden;
+    clear: both;
+    height: 1px;
+    opacity: 0;
+}
+
+.icon {
+    position: relative;
+    top: -8px;
+    height: 50px;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+    background: none !important;
+}
+
+.icon:before {
+    font-size: 50px;
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #eb7f00;
+}
+
+.section {
+    margin: auto;
+    padding: 0px 0px 0px 0px;
+    vertical-align: top;
+    text-align: center;
+}
+.section h3{
+font-size: 1.8em;
+    font-family: 'aleolight';
+}
+.section h4{
+    
+    font-family: 'aleolight';
+    display: table-cell;
+    vertical-align: middle;
+}
+.section h2{
+    font-family: 'aleolight';
+    font-size: 2em;
+/*
+    top: -40px;
+    position: relative;
+    margin-bottom: 5px;
+*/
+/*    text-align: left;*/
+}
+#coursesTitle{
+    top: -40px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.sectionWrap {
+    width: 100%;
+    background: #eee;
+    border-top: 1px solid #eee;
+    padding: 0;
+}
+.featuredCourseContain{
+    margin: 0px 20px 0px 20px;
+/*    border-top: 3px solid #eb7f00;*/
+/*    border-bottom: 3px solid #eb7f00;*/
+/*    max-width: 850px;*/
+    margin: auto;
+/*    background: white;*/
+    padding-bottom: 5px;
+}
+.featuredCourse{
+    width: 230px;
+    padding-top: 0;
+    vertical-align: top;
+    border-top: 3px solid #eb7f00;
+    border-bottom: 3px solid #eb7f00;
+    display: inline-block;
+    margin: 3px 22px 3px 22px;
+}
+.featuredCourseHeader{
+    background: url('pics/2.jpg');
+    background-size: cover;
+    color: white;
+    width: 100%;
+    height: 150px;
+}
+.grey{
+    width: 100%;
+    height: 100%;
+    display: table;
+    background: rgba(0, 0, 0, 0.42);
+}
+#moreCourses{
+    font-size: 1.2em;
+    box-shadow: none;
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid black;
+}
+#moreCourses:hover .blueUnder{
+    box-shadow: none;
+}
+.blueUnder{
+    box-shadow: inset 0 -6px 0 #acf0f2;
+}
+.courseCatContain{
+    
+}
+
+#privates .courseCatImg{
+    float: left;
+    background-image: url(pics/10.jpg);
+    background-position: left top;
+}
+#group .courseCatImg{
+    float: right;
+    background-image: url(pics/11.jpg);
+    background-position: right top;
+}
+.courseCatImg{
+    width: 50%;
+    height: 400px;
+    background-size: cover;
+
+    z-index: 0;
+}
+.widthWrap {
+    width: 800px;
+    margin: auto;
+    z-index: 2;
+    vertical-align: top;
+    height: 400px;
+    padding-top: 2px;
+}
+.courseCatContent{
+    margin-top: 120px;
+    vertical-align: top;
+}
+.courseCatContent p{
+    max-width: 320px;
+    float: right;
+    margin-right: 35px;
+}
 @media screen and (max-width: 800px) {
-    .hasChildren {
-        
-    }
+    .hasChildren {}
     #navHolder {
         display: inline-block;
         width: 60px;
@@ -241,7 +374,7 @@ section h2 {
         width: 100%;
         padding-left: 0;
     }
-    nav ul{
+    nav ul {
         text-align: left;
         margin-left: 60px;
     }
@@ -250,7 +383,6 @@ section h2 {
         margin: 5px;
         display: block;
         float: none;
-
     }
     p {
         padding: 15px;
@@ -276,7 +408,6 @@ section h2 {
         margin-top: 10px;
         text-align: left;
         margin-left: 20px;
-
     }
     nav {
         max-width: 800px;
@@ -337,48 +468,21 @@ section h2 {
         transform: scale(1);
     }
 }
-
 @media screen and (max-width: 698px) {
     #navContain label {
         top: 14px;
     }
-    #navHolder [type="checkbox"]:checked ~ #navContain label{
+    #navHolder [type="checkbox"]:checked ~ #navContain label {
         top: 3px;
     }
 }
-
 @media screen and (max-width: 648px) {
     #navHolder {
         width: 10px;
     }
 }
-
 @media screen and (max-width: 430px) {
     #navHolder {
         width: 60px;
     }
-}
-
-.clearfix {
-    display: hidden;
-    clear: both;
-    height: 1px;
-    opacity: 0;
-}
-
-.icon {
-    position: relative;
-    top: -8px;
-    height: 50px;
-    margin: auto;
-    padding: 0;
-    text-align: center;
-    background: none !important;
-}
-
-.icon:before {
-    font-size: 50px;
-    margin: 0 0 10px 0;
-    padding: 0;
-    color: #eb7f00;
 }
